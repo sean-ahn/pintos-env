@@ -6,18 +6,18 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 
 # Install some useful apps
 RUN apt-get update && \
-	apt-get install -y sudo && \
-	sudo apt-get install -y --no-install-recommends apt-utils && \
-	apt-get install -y \
-		wget \
-		tar \
-		make \
-		patch \
-		vim \
-		git \
-		gdb \
-	locales locales-all && \
-	locale-gen ko_KR.UTF-8
+		apt-get install -y sudo && \
+		sudo apt-get install -y --no-install-recommends apt-utils && \
+		apt-get install -y \
+			wget \
+			tar \
+			make \
+			patch \
+			vim \
+			git \
+			gdb \
+		locales locales-all && \
+		locale-gen ko_KR.UTF-8
 
 # Set default messages to English
 ENV LC_ALL en_US.UTF-8
@@ -31,11 +31,13 @@ RUN chmod +x ./install.sh
 RUN ./install.sh
 RUN rm ./install.sh
 
-# Install gdbgui https://gdbgui.com/
+# Install pip for install gdbgui
 RUN sudo apt-get update && \
-	sudo apt-get install -y python-pip && \
-	pip install --upgrade pip && \
-	pip install gdbgui --upgrade
+		sudo apt-get install -y python-pip && \
+		pip install --upgrade pip
+
+# Install gdbgui https://gdbgui.com/
+RUN pip install gdbgui
 
 # Install fuser for debugging
 RUN apt-get install psmisc
