@@ -14,7 +14,7 @@ $ gem install docker-sync
 ```
 $ docker-compose build
 ```
-* For environment setting, I use [this](https://gist.github.com/minsuu/19a271ccf366e168501685c2bc2d6f03).
+`NOTE` For environment setting, I use [this shell script](https://gist.github.com/minsuu/19a271ccf366e168501685c2bc2d6f03) which is officially provided in class.
 > You can skip this step, if you are not going to create your own image.
 ### Start containers
 ```
