@@ -1,1 +1,1 @@
-<center> This directory is for pintos source code. </center>
+<p align="center"> This directory for Pintos source code. </p>
