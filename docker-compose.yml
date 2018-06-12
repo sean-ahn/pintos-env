@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  dev:
+    build: .
+    image: seanahn/pintos:public
+    container_name: pintos-dev
+    environment:
+      - HOME=/root
+    volumes:
+      - pintos-volume:/root/pintos:nocopy
+    command: gdbgui -r -x misc/gdb-macros --project /root/pintos/src
+    ports:
+      - 5000:5000
+
+volumes:
+  pintos-volume:
+    external: true
