@@ -32,7 +32,8 @@ From now on, you are in a docker container.
 ```
 root@{CONTAINER-ID}:~/pintos/src# ls
 devices  examples  filesys  lib  LICENSE  Make.config  Makefile  Makefile.build  Makefile.kernel  Makefile.userprog  misc  tests  threads  userprog  utils  vm
-root@{CONTAINER-ID}:~/pintos/src#
+root@{CONTAINER-ID}:~/pintos/src# cd threads
+root@{CONTAINER-ID}:~/pintos/src/threads# make check
 ```
 * You don't need to modify source code in this container. You can modify your code in host system.
 * You have to compile source code in this container.
