@@ -20,7 +20,20 @@ $ docker-compose build
 ```
 $ docker-sync-stack start
 ```
-> Access http://localhost:5000! You can use gdb with GUI!
+> Access http://localhost:5000! You can use gdb with GUI in browser!
+
+### Access container
+```
+$ docker exec -it pintos-dev bash
+```
+From now on, you are in a docker container.
+```
+root@{CONTAINER-ID}:~/pintos/src# ls
+devices  examples  filesys  lib  LICENSE  Make.config  Makefile  Makefile.build  Makefile.kernel  Makefile.userprog  misc  tests  threads  userprog  utils  vm
+root@{CONTAINER-ID}:~/pintos/src#
+```
+* You don't need to modify source code in this container. You can modify your code in host system.
+* You have to compile source code in this container.
 
 ### Clean containers
 ```
