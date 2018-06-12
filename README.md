@@ -20,7 +20,9 @@ $ docker-compose build
 ```
 $ docker-sync-stack start
 ```
-> Access http://localhost:5000! You can use gdb with GUI in browser!
+> Access http://localhost:5000! You can use gdb with GUI in browser! As shown in the screenshot below.
+
+![official website image](https://raw.githubusercontent.com/cs01/gdbgui/master/screenshots/gdbgui_animation.gif)
 
 ### Access container
 ```
