@@ -4,8 +4,10 @@
 Based on `macOS`!
 
 ### Prerequisite
-#### 1. Install docker 
-[Official Document](https://docs.docker.com/install/)
+#### 1. Install docker & docker-compose
+Official document
+* [docker](https://docs.docker.com/install/)
+* [docker-compose](https://docs.docker.com/compose/install/#install-compose)
 #### 2. Install docker-sync
 ```
 $ gem install docker-sync
